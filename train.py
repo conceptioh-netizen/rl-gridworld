@@ -3,7 +3,7 @@ from tqdm import tqdm
 from agents import QLearning, SARSA
 from env import GridWorld
 
-def train_qlearning(env,n_episodes=2000,max_steps=200):
+def train_qlearning(env,n_episodes=5000,max_steps=500):
     agent = QLearning(env.n_states,env.n_actions,epsilon=0.3)
     rewards = []
 
@@ -27,7 +27,7 @@ def train_qlearning(env,n_episodes=2000,max_steps=200):
     return agent, rewards
 
 
-def train_sarsa(env,n_episodes=2000,max_steps=200):
+def train_sarsa(env,n_episodes=5000,max_steps=500):
     agent = SARSA(env.n_states,env.n_actions,epsilon=0.3)
     rewards = []
 

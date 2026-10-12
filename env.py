@@ -7,9 +7,9 @@ class GridWorld:
         self.n_states = size * size
         self.start = (0, 0)
         self.goal = (size - 1, size - 1)
-        self.obstacles = {(2,2),(2,3),(3,2),(5,6),(6,5),(6,6),
-                          (4,4), (6,3), (3,6), (12,2), (10,10), 
-                          (3,16), (16,16), (16,18), (18,19)
+        self.obstacles = {(2,2),(2,3),(3,2),(5,6),
+                          (6,5),(6,6),(4,4), 
+                          (6,3), (3,6), (5,5)
                           }
         self.actions = [(-1,0), (1,0),  (0,-1), (0,1)]
         #               haut    bas    gauche  droite

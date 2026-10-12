@@ -8,13 +8,13 @@ def smooth(x, w=50):
     return np.convolve(x, np.ones(w)/w, mode='valid')
 
 if __name__ == "__main__":
-    env = GridWorld(size=20)
+    env = GridWorld(size=10)
     
     print("Entraînement Q-Learning...")
-    agent_ql, r_ql = train_qlearning(env, n_episodes=2000)
+    agent_ql, r_ql = train_qlearning(env, n_episodes=5000)
     
     print("Entraînement SARSA...")
-    agent_sa, r_sa = train_sarsa(env, n_episodes=2000)
+    agent_sa, r_sa = train_sarsa(env, n_episodes=5000)
     plt.figure(figsize=(10, 5))
     plt.plot(smooth(r_ql), label="Q-Learning", lw=2)
     plt.plot(smooth(r_sa), label="SARSA", lw=2)
